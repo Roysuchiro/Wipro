@@ -1,4 +1,44 @@
-package PACKAGE_NAME;
+//Write a program that takes the row & columns input from the user to populate a 2D array and then prints the array.
+//
+//Sample Input & Output:
+//
+//Sample Input:
+//        2
+//        3
+//        1 2 3
+//        4 5 6
+//
+//Sample Output:
+//        1 2 3
+//        4 5 6
+//Hints:
+//        1. Use the Scanner class to read input from the user.
+//        2. Create a nested for loop to iterate over the rows and columns of the array.
+//3. Use the nextInt() method of the Scanner class to read integer values from the user.
+//        4. Store the input values in the array using the appropriate indices.
+//5. Print the array using a nested for loop.
+
+
+import java.util.Scanner;
 
 public class Question_2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int rows = scanner.nextInt();
+        int col = scanner.nextInt();
+        int[][] arr = new int[rows][col];
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j]=scanner.nextInt();
+            }
+        }
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<col;j++){
+                System.out.print(arr[i][j]+ " ");
+            }
+            System.out.print("\n");
+        }
+
+        scanner.close();
+    }
 }
