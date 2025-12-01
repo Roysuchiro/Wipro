@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Flowers School - Student Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Fixed header section */
+    header {
+      background-color: #2b6cb0;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .logo-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .text-part {
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .text-part h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .text-part p {
+      margin: 3px 0 0 0;
+      font-size: 13px;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #1e4f8a;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      top: 80px; /* below header */
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #174072;
+    }
+
+    /* Page content container */
+    .container {
+      width: 80%;
+      margin: 160px auto 20px auto; /* offset for fixed header and nav */
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    h2 {
+      color: #2b6cb0;
+      text-align: center;
+    }
+
+    /* Student card styling */
+    .student {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+    }
+
+    .student img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+    .student h3 {
+      text-align: center;
+      color: #2b6cb0;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2b6cb0;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #2b6cb0;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    <div class="logo-title">
+      <img src="schoolLogo.avif" alt="School Logo">
+      <div class="text-part">
+        <h1>Spring Flowers School</h1>
+        <p>Student Management Portal</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Students</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+    <h2>Our Students</h2>
+
+    <div class="student">
+      <img src="avatar3.webp" alt="ABC">
+      <h3>ABC</h3>
+      <div class="details">
+        <p><strong>Class:</strong> 10</p>
+        <p><strong>Roll No.:</strong> 12</p>
+        <p><strong>Date of Birth:</strong> 17 May 2009</p>
+        <p><strong>Email:</strong> ABC@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+      </div>
+      <table>
+        <tr><th>Subject</th><th>Grade</th></tr>
+        <tr><td>Mathematics</td><td>A</td></tr>
+        <tr><td>Science</td><td>A</td></tr>
+        <tr><td>English</td><td>B+</td></tr>
+      </table>
+    </div>
+
+    <div class="student">
+      <img src="avatar2.webp" alt="DEF">
+      <h3>DEF</h3>
+      <div class="details">
+        <p><strong>Class:</strong> 9</p>
+        <p><strong>Roll No.:</strong> 5</p>
+        <p><strong>Date of Birth:</strong> 22 Aug 2010</p>
+        <p><strong>Email:</strong> DEF@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 67890</p>
+      </div>
+      <table>
+        <tr><th>Subject</th><th>Grade</th></tr>
+        <tr><td>Mathematics</td><td>B+</td></tr>
+        <tr><td>Science</td><td>A</td></tr>
+        <tr><td>English</td><td>A</td></tr>
+      </table>
+    </div>
+
+    <div class="student">
+      <img src="avatar1.webp" alt="XYZ">
+      <h3>XYZ</h3>
+      <div class="details">
+        <p><strong>Class:</strong> 11</p>
+        <p><strong>Roll No.:</strong> 3</p>
+        <p><strong>Date of Birth:</strong> 12 Nov 2008</p>
+        <p><strong>Email:</strong> XYZ@example.com</p>
+        <p><strong>Phone:</strong> +91 99876 54321</p>
+      </div>
+      <table>
+        <tr><th>Subject</th><th>Grade</th></tr>
+        <tr><td>Mathematics</td><td>A+</td></tr>
+        <tr><td>Science</td><td>A</td></tr>
+        <tr><td>English</td><td>A+</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Spring Flowers School. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

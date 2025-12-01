@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Flowers School - Student Management</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #2b6cb0;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .text-part {
+      line-height: 1.2;
+    }
+
+    nav {
+      background-color: #1e4f8a;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #174072;
+    }
+
+    .container {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .student {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      flex: 1 1 300px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .student:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transform: scale(1.02);
+    }
+
+    .student img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .timetable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .timetable h3 {
+      color: #2b6cb0;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    th {
+      background-color: #2b6cb0;
+      color: white;
+    }
+
+    footer {
+      background-color: #2b6cb0;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="schoolLogo.avif" alt="School Logo">
+      <div class="text-part">
+        <h1>Spring Flowers School</h1>
+        <p>Student Management Portal</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="text-center sticky-top">
+    <a href="#home">Home</a>
+    <a href="#application">Student Application</a>
+    <a href="#timetable">Time Table</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="container text-center">
+    <h2 class="text-primary mb-4">Welcome to Spring Flowers School</h2>
+    <p>Manage student information, view timetables, and explore our student portal.</p>
+  </div>
+
+  <!-- Student Application Section -->
+  <div id="application" class="container">
+    <h2 class="text-center text-primary mb-4">Student Application</h2>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+
+      <!-- Student 1 -->
+      <div class="student text-center" data-bs-toggle="modal" data-bs-target="#student1Modal">
+        <img src="avatar3.webp" alt="ABC">
+        <h4>ABC</h4>
+        <p><strong>Class:</strong> 10</p>
+        <p><strong>Roll No.:</strong> 12</p>
+      </div>
+
+      <!-- Student 2 -->
+      <div class="student text-center" data-bs-toggle="modal" data-bs-target="#student2Modal">
+        <img src="avatar2.webp" alt="DEF">
+        <h4>DEF</h4>
+        <p><strong>Class:</strong> 9</p>
+        <p><strong>Roll No.:</strong> 5</p>
+      </div>
+
+      <!-- Student 3 -->
+      <div class="student text-center" data-bs-toggle="modal" data-bs-target="#student3Modal">
+        <img src="avatar1.webp" alt="XYZ">
+        <h4>XYZ</h4>
+        <p><strong>Class:</strong> 11</p>
+        <p><strong>Roll No.:</strong> 3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time Table Section -->
+  <div id="timetable" class="container timetable">
+    <h3>Class Time Table</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:00 - 12:00</th>
+          <th>1:00 - 2:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Maths</td>
+          <td>Science</td>
+          <td>English</td>
+          <td>Games</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Science</td>
+          <td>Maths</td>
+          <td>English</td>
+          <td>Computer</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>English</td>
+          <td>Maths</td>
+          <td>Science</td>
+          <td>Drawing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="contact" class="container text-center">
+    <h2 class="text-primary">Contact Us</h2>
+    <p>Email: info@springflowersschool.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </div>
+
+ 
+  <footer>
+    <p>&copy; 2025 Spring Flowers School. All rights reserved.</p>
+  </footer>
+
+  <div class="modal fade" id="student1Modal" tabindex="-1" aria-labelledby="student1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="student1Label">Student Details - ABC</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Full Name:</strong> ABC</p>
+          <p><strong>Class:</strong> 10</p>
+          <p><strong>Roll No.:</strong> 12</p>
+          <p><strong>Address:</strong> 123 Green Street, Kolkata</p>
+          <p><strong>Parents’ Name:</strong> Mr. & Mrs. Roy</p>
+          <p><strong>Contact:</strong> +91 98765 43210</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Student 2 Modal -->
+  <div class="modal fade" id="student2Modal" tabindex="-1" aria-labelledby="student2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="student2Label">Student Details - DEF</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Full Name:</strong> DEF</p>
+          <p><strong>Class:</strong> 9</p>
+          <p><strong>Roll No.:</strong> 5</p>
+          <p><strong>Address:</strong> 45 Park Avenue, Delhi</p>
+          <p><strong>Parents’ Name:</strong> Mr. & Mrs. Sharma</p>
+          <p><strong>Contact:</strong> +91 99876 54321</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="student3Modal" tabindex="-1" aria-labelledby="student3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="student3Label">Student Details - XYZ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Full Name:</strong> XYZ</p>
+          <p><strong>Class:</strong> 11</p>
+          <p><strong>Roll No.:</strong> 3</p>
+          <p><strong>Address:</strong> 78 Lake View Road, Mumbai</p>
+          <p><strong>Parents’ Name:</strong> Mr. & Mrs. Singh</p>
+          <p><strong>Contact:</strong> +91 91234 56789</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

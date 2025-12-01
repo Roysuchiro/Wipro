@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This web.xml file is not required when using Servlet 3.0 container,
+     see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.contact.manager</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/webapi/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddContactServlet</display-name>
+    <servlet-name>AddContactServlet</servlet-name>
+    <servlet-class>com.contact.manager.servlet.AddContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddContactServlet</servlet-name>
+    <url-pattern>/AddContactServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListContactServlet</display-name>
+    <servlet-name>ListContactServlet</servlet-name>
+    <servlet-class>com.contact.manager.servlet.ListContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListContactServlet</servlet-name>
+    <url-pattern>/ListContactServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateContactServlet</display-name>
+    <servlet-name>UpdateContactServlet</servlet-name>
+    <servlet-class>com.contact.manager.servlet.UpdateContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateContactServlet</servlet-name>
+    <url-pattern>/UpdateContactServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteContactServlet</display-name>
+    <servlet-name>DeleteContactServlet</servlet-name>
+    <servlet-class>com.contact.manager.servlet.DeleteContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteContactServlet</servlet-name>
+    <url-pattern>/DeleteContactServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditContactServlet</display-name>
+    <servlet-name>EditContactServlet</servlet-name>
+    <servlet-class>com.contact.manager.servlet.EditContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditContactServlet</servlet-name>
+    <url-pattern>/EditContactServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteContactServletn</display-name>
+    <servlet-name>DeleteContactServletn</servlet-name>
+    <servlet-class>com.contact.manager.servlet.DeleteContactServletn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteContactServletn</servlet-name>
+    <url-pattern>/DeleteContactServletn</url-pattern>
+  </servlet-mapping>
+</web-app>
